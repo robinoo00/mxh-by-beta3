@@ -1,0 +1,106 @@
+.mod-userinfo {
+    background-color: #262834;
+    padding: .15rem .2rem;
+}
+.flex2{
+    /*display: flex;*/
+    /*justify-content: space-around;*/
+}
+.mod-userinfo .balance-wrap {
+    text-align: center;
+    color: #FFF;
+    padding: 0 0 .1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mod-userinfo .pay-wrap {
+    display: table;
+    width: 100%;
+}
+.mod-userinfo .pay-wrap li {
+    display: table-cell;
+    width: 50%;
+}
+.mod-userinfo .pay-wrap a {
+    display: block;
+    text-align: center;
+    line-height: .4rem;
+    border-radius: .05rem;
+    background-color: #5B78C0;
+    color: #FFF;
+    font-size: .16rem;
+}
+.mod-menu {
+    margin-top: .1rem;
+    border-top: .01rem solid #222227;
+    border-bottom: .01rem solid #222227;
+    padding-left: .2rem;
+    background-color: #262834;
+}
+.mod-menu a {
+    display: block;
+    position: relative;
+    line-height: .5rem;
+    font-size: .16rem;
+    border-bottom: .01rem solid #222227;
+}
+.mod-menu a:last-child {
+    border-bottom: none;
+}
+.mod-arrow-r {
+    background: url(../images/icon-arrow-r.png) left center no-repeat;
+    background-size: .12rem;
+}
+.mod-arrow-r, .mod-ok-r {
+    position: absolute;
+    width: .2rem;
+    top: 0;
+    bottom: 0;
+    right: 0;
+}
+i {
+    display: inline-block;
+}
+em, i, strong {
+    font-style: normal;
+    font-weight: 400;
+}
+.mod-menu .iconfont {
+    width: .3rem;
+    height: .3rem;
+    border-radius: 100%;
+    text-align: center;
+    line-height: .3rem;
+    vertical-align: middle;
+    margin-right: .15rem;
+}
+.iconfont[data-icon="detail"]:before{
+    content:'\e61e';
+    font-family: iconfont;
+}
+.iconfont[data-icon="capital"]:before{
+    content:'\e604';
+    font-family: iconfont;
+}
+.iconfont[data-icon="my"]:before{
+    content:'\e66a';
+    font-family: iconfont;
+}
+.iconfont[data-icon="money"]:before{
+    content:'\e602';
+    font-family: iconfont;
+}
+.iconfont[data-icon="invite"]:before{
+    content:'\e601';
+    font-family: iconfont;
+}
+.iconfont[data-icon="apply"]:before{
+    content:'\e603';
+    font-family: iconfont;
+}
+.iconfont[data-icon="setting"]:before{
+    content:'\e72d';
+    font-family: iconfont;
+}

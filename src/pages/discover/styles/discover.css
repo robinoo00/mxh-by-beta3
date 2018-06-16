@@ -1,0 +1,15 @@
+.con-wrap{
+    padding: .1rem .15rem;
+}
+.con{
+    font-weight: 400;
+    font-size: .13rem;
+    line-height: .16rem;
+    text-align: justify;
+    color: #fff;
+}
+.time{
+    color: #999 ;
+    padding-top: .1rem;
+    font-size: .1rem;
+}

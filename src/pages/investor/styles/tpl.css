@@ -1,0 +1,13 @@
+.mod-investor-wrap .content {
+    margin-top: .15rem;
+    padding: 0 .1rem .1rem;
+    background: #262834
+}
+
+.mod-investor-wrap .content > h3 {
+    text-align: center;
+    padding: .2rem 0 .1rem
+}
+.txt-grey {
+    color: #999 !important;
+}

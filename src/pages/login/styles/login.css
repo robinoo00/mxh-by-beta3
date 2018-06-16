@@ -1,0 +1,89 @@
+.mod-login {
+    /*padding: 0 0 .3rem*/
+}
+
+.mod-login .back {
+    position: absolute;
+    top: .15rem;
+    left: .15rem
+}
+
+.mod-login .logo {
+    padding-top: .2rem
+}
+
+.mod-login .logo .logo-img {
+    width: 1.1rem;
+    height: 1.1rem;
+    background: url(../images/logo.png) center no-repeat;
+    background-size: 100%;
+    border-radius: 100%;
+    margin: 0 auto
+}
+
+.mod-login .forms {
+    margin: .6rem .375rem .3rem
+}
+
+.mod-login .action {
+    margin: .3rem .375rem
+}
+
+.mod-login .links > a {
+    color: #07e;
+    vertical-align: middle
+}
+
+.mod-login .links {
+    margin-top: 0.15rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.mod-form {
+    position: relative;
+    padding: .05rem 0 .05rem .15rem;
+    line-height: .32rem;
+    display: flex;
+    align-items: center;
+}
+
+.mod-form label {
+    display: inline-block;
+    color: #FFF;
+    font-size: .16rem;
+    white-space: nowrap;
+}
+
+.inp {
+    border: none;
+    line-height: .3rem;
+    padding: .01rem .1rem;
+    margin-left: .08rem;
+    font-size: .14rem;
+    background: #262834;
+    color: #FFF;
+    -webkit-appearance: none;
+    flex: 1;
+}
+/* 记住&忘记密码 */
+.mod-login .option {
+    overflow: hidden;
+    width: 100%;
+    margin-top: 0.05rem;
+    line-height: 0.2rem;
+    display: flex;
+    align-items: center;
+}
+
+.mod-login .option .checkbox {
+    float: left;
+    width: 0.15rem;
+    height: 0.15rem;
+    margin-left: 0.12rem;
+}
+
+.mod-login .option .remember_pw {
+    float: left;
+    margin-left: 0.06rem;
+}

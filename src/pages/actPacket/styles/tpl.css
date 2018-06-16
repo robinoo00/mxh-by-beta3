@@ -1,0 +1,112 @@
+.mod-act-packet-banner {
+    width: 100%
+}
+
+.mod-act-packet-banner > img {
+    display: block;
+    width: 100%
+}
+.mod-act-packet-list .wrap {
+    background: #262834
+}
+
+.mod-act-packet-list .wrap > .list {
+    display: block;
+    position: relative;
+    line-height: 1.3;
+    padding: .15rem .2rem;
+    overflow: hidden;
+    border-bottom: 1px solid #20212b
+}
+
+.mod-act-packet-list .wrap .tit {
+    float: left;
+    color: #666
+}
+
+.mod-act-packet-list .wrap .tit .hot-icon {
+    display: inline-block;
+    width: .09rem;
+    height: .1rem;
+    background: url(../images/hot.png) no-repeat;
+    background-size: .09rem .1rem;
+    position: relative;
+    top: -.06rem
+}
+
+.mod-act-packet-list .wrap .tit .new-icon {
+    display: inline-block;
+    width: .12rem;
+    height: .09rem;
+    background: url(../images/new.png) no-repeat;
+    background-size: .12rem .09rem
+}
+
+.mod-act-packet-list .wrap .desc {
+    font-size: .12rem;
+    color: #999;
+    margin-top: .05rem
+}
+
+.mod-act-packet-list .wrap .fr {
+    float: right;
+    text-align: right
+}
+
+.mod-act-packet-list .wrap .fr .packet-icon {
+    display: inline-block;
+    position: absolute;
+    top: .15rem;
+    right: .61rem;
+    width: .6rem;
+    height: .37rem;
+    line-height: .37rem;
+    background: url(../images/hb.png) no-repeat;
+    -webkit-background-size: .6rem .37rem;
+    background-size: .6rem .37rem;
+    border-radius: .06rem;
+    font-size: 14px;
+    color: #FFF;
+    text-align: left;
+    text-indent: .07rem
+}
+
+.mod-act-packet-list .wrap .fr .packet-icon-on {
+    background: url(../images/hbon.png) no-repeat;
+    -webkit-background-size: .6rem .37rem;
+    color: #FFE15D;
+    display: inline-block;
+    position: absolute;
+    top: .15rem;
+    right: .61rem;
+    width: .6rem;
+    height: .37rem;
+    line-height: .37rem;
+    background-size: .6rem .37rem;
+    border-radius: .06rem;
+    font-size: 14px;
+    text-align: left;
+    text-indent: .07rem
+}
+
+.mod-act-packet-list .wrap .fr .packet-type {
+    display: inline-block;
+    border: 1px solid #9C9C9C;
+    border-radius: .06rem;
+    width: .6rem;
+    height: .35rem;
+    line-height: .35rem;
+    text-align: left;
+    text-indent: .22rem
+}
+.txt-s14 {
+    font-size: .14rem;
+    color: #666 !important;
+}
+.fr{
+    float: right;
+}
+.txt-red {
+    color: #E34C4D !important;
+    font-size: .14rem;
+}

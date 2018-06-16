@@ -1,0 +1,192 @@
+/*@font-face {
+    font-family: 'iconfont';  !* project id 644346 *!
+    src: url('//at.alicdn.com/t/font_644346_9icgdk27421hh0k9.eot');
+    src: url('//at.alicdn.com/t/font_644346_9icgdk27421hh0k9.eot?#iefix') format('embedded-opentype'),
+    url('//at.alicdn.com/t/font_644346_9icgdk27421hh0k9.woff') format('woff'),
+    url('//at.alicdn.com/t/font_644346_9icgdk27421hh0k9.ttf') format('truetype'),
+    url('//at.alicdn.com/t/font_644346_9icgdk27421hh0k9.svg#iconfont') format('svg');
+}*/
+@font-face {
+    font-family: 'iconfont';  /* project id 644346 */
+    src: url('./utils/fonts/iconfont.eot');
+    src: url('./utils/fonts/iconfont.eot?#iefix') format('embedded-opentype'),
+    url('./utils/fonts/iconfont.woff') format('woff'),
+    url('./utils/fonts/iconfont.ttf') format('truetype'),
+    url('./utils/fonts/iconfont.svg#iconfont') format('svg');
+}
+html {
+  font-size: 625%;
+}
+html,body{
+  background-color: #20212b;
+    height: 100%;
+}
+body{
+    font-size: 12px;
+    position: relative;
+    font: 14px/1.5 微软雅黑, Arial, YaHei, tahoma, 'Hiragino Sans GB', 宋体
+}
+@media all and (max-width: 320px) {
+    body {
+        font-size: 12px
+    }
+}
+table{
+    width: 100%;
+}
+li{
+    list-style: none;
+}
+*{
+  margin: 0;
+  padding: 0;
+}
+*, :after, :before, svg {
+    -webkit-tap-highlight-color: transparent
+}
+*, :after, :before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%
+}
+a, html {
+    color: #FFF;
+}
+.am-accordion .am-accordion-item .am-accordion-header{
+    background-color: #262834 !important;
+    color: #fff !important;
+}
+.am-accordion .am-accordion-item .am-accordion-content{
+    background-color: #262834 !important;
+}
+.am-accordion .am-accordion-item .am-accordion-content .am-accordion-content-box{
+    color: #fff;
+}
+.am-list-item{
+    background-color: #262834 !important;
+}
+.am-list-item .am-list-line .am-list-content{
+    color: #CCC !important;
+    font-size: .13rem !important;
+}
+.am-modal-input-container{
+    width: 85% !important;
+    margin: 9px auto 0 !important;
+}
+.am-list-item .am-list-line .am-list-extra{
+    font-size: .13rem !important;
+    text-overflow: initial;
+}
+.am-list-body{
+    border: none !important;
+}
+.am-list-body::before{
+    opacity: 0;
+}
+.am-list-body::after{
+    opacity: 0;
+}
+.am-list-line::after{
+    background-color: #222227 !important;
+}
+.am-list-item .am-input-label{
+    color: #fff !important;
+}
+.am-list-item .am-input-control input{
+    color: #fff !important;
+    font-size: .13rem !important;
+}
+.mod-agree .agree-wrap table, table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+.am-button-primary{
+    border: none !important;
+}
+.am-list-item:not(:last-child) .am-list-line{
+    border: none !important;
+}
+html:not([data-scale]) .am-button-primary::before{
+    border: none !important;
+}
+.am-list-item .am-input-control .fake-input-container .fake-input{
+    color: #fff !important;
+}
+.am-activity-indicator-tip{
+    color: #fff !important;
+}
+.am-modal-transparent .am-modal-content .am-modal-body{
+    padding: 0 0 15px 0 !important;
+}
+.am-modal-transparent{
+    width: 80% !important;
+}
+.page {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: block;
+    z-index: 1;
+}
+.page-enter {
+    z-index: 1024;
+    opacity: 0.2;
+}
+.page-enter.page-enter-active{
+    animation:page-enter-animate 0.2s ease;
+}
+@keyframes page-enter-animate {
+    0% {
+        opacity:0.2;
+    }
+    25% {
+        opacity:0.5;
+    }
+    50% {
+        opacity: 0.75;
+    }
+    100% {
+        opacity:1;
+    }
+    /*0% {opacity: 0.01;transform: rotate(45deg);transform-origin: 50% 50%}*/
+    /*100% {opacity: 1;transform: rotate(0);transform-origin: 50% 50%}*/
+}
+.page-leave{
+    opacity: 0;
+}
+.page-leave.page-leave-active {
+    /*animation:page-leave-animate 0.3s ease-in-out infinite;*/
+}
+@keyframes page-leave-animate {
+    0% {
+        opacity:0.75;
+    }
+    25% {
+        opacity:0.5;
+    }
+    50% {
+        opacity: 0.25;
+    }
+    100% {
+        opacity:0;
+    }
+    /*0% {opacity: 1;transform: rotate(0);transform-origin: 50% 50%}*/
+    /*100% {opacity: 0.01;transform: rotate(45deg);transform-origin: 50% 50%}*/
+}
+.window_toast{
+    background-color: rgba(0, 0, 0, 0.24);
+    padding: 6px 11px;
+    display: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: #fff;
+    font-size: 14px;
+    position: fixed;
+    z-index: 1;
+    border-radius: 8px;
+}

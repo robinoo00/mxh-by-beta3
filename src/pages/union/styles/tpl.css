@@ -1,0 +1,132 @@
+.title {
+    display: table;
+    width: 100%;
+    height: .5rem;
+    background: #262834;
+}
+.title>li {
+    display: table-cell;
+    width: 50%;
+    text-align: center;
+}
+.title>li>span {
+    display: inline-block;
+    min-width: .6rem;
+    line-height: .49rem;
+    border-bottom: .02rem solid #262834;
+}
+.title .choose{
+    border-bottom: .02rem solid #FFF;
+}
+.mod-union-wrap .union .mod-union, .mod-union-wrap .user .mod-union-user {
+    display: block;
+}
+.mod-union .info, .mod-union .levels, .mod-union .links {
+    margin-top: .1rem;
+    background: #262834
+}
+
+.mod-union .info > ul {
+    display: table;
+    width: 100%
+}
+
+.mod-union .info > ul > li {
+    display: table-cell;
+    width: 30%;
+    text-align: center;
+    color: #CCC;
+    padding: .2rem 0
+}
+
+.mod-union .info > ul > li:nth-child(2) {
+    width: 40%;
+    border-left: .01rem solid #222227;
+    border-right: .01rem solid #222227
+}
+
+.mod-union .info .tit {
+    margin: 0 0 .1rem
+}
+
+.mod-union .info .main {
+    font-size: .2rem;
+    color: #FFF
+}
+
+.mod-union .links {
+    padding: .15rem 0;
+    text-align: center
+}
+
+.mod-union .links .copy-target {
+    width: 2.2rem;
+    background: #262834;
+    border: none;
+    color: #5B78C0
+}
+
+.mod-union .links .qrcode-mod {
+    padding-top: .2rem;
+    text-align: center
+}
+
+.mod-union .links .qrcode-mod .qrcode-wrap {
+    display: inline-block;
+    padding: .1rem;
+    background: #FFF
+}
+
+.mod-union .links .qrcode-mod .qrcode-wrap > img {
+    display: block;
+    margin: 0 auto
+}
+
+.mod-union .levels {
+    padding: .15rem
+}
+
+.mod-union .levels td {
+    padding: .05rem 0;
+    border: .01rem solid #666;
+    color: #CCC;
+    text-align: center
+}
+
+.mod-union-user td {
+    padding: .15rem;
+    border-top: .01rem solid #222227;
+    color: #CCC;
+    background: #262834
+}
+.mt10 {
+    margin-top: .1rem
+}
+
+.mt15 {
+    margin-top: .15rem
+}
+.txt-white {
+    color: #FFF !important
+}
+.mb10 {
+    margin-bottom: .1rem
+}
+.mb15 {
+    margin-bottom: .15rem
+}
+.txt-blue {
+    color: #5B78C0 !important
+}
+table{
+    width: 100%;
+}
+.mod-union-user td {
+    padding: .15rem;
+    border-top: .01rem solid #222227;
+    color: #CCC;
+    background: #262834
+}
+.txt-right{
+    text-align: right;
+}
