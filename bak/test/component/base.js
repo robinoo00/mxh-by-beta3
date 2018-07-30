@@ -97,6 +97,8 @@ class Base {
         self.量区高度 = (self.画布高度 - self.K线区高度) * 0.4;
         self.MACD区宽度 = self.画布宽度;
         self.MACD区高度 = (self.画布高度 - self.K线区高度) * 0.6;
+        ;
+
         self.画布上下文.translate(0.5, 0.5);
         self.画布上下文.lineWidth = 1;
     }
@@ -123,8 +125,8 @@ class Base {
         if (self.类型 == "分时") {
             //输出数组.最大值 = 最大值 + ((最大值 - 最小值)/4);
             //输出数组.最小值 = 最小值 - ((最大值 - 最小值) / 4);
-            输出数组.最大值 = 最大值 ;
-            输出数组.最小值 = 最小值 ;
+            输出数组.最大值 = 最大值;
+            输出数组.最小值 = 最小值;
             // 输出数组.量最大值 = Enumerable.From(data).Max(function (i) { return i.量; });
             // 输出数组.量最小值 = Enumerable.From(data).Min(function (i) { return i.量; });
             输出数组.量最大值 = self.getMax(data,'量');
@@ -140,7 +142,8 @@ class Base {
             return 输出数组;
         }
 
-    }    getMax(data,key){
+    }
+    getMax(data,key){
         var max = data[0][key];
         for(var i = 0; i < data.length; i ++){
             if(data[i][key] > max){
@@ -168,7 +171,8 @@ class Base {
         };
         avg = sum / (index < val ? index + 1 : val);
         return avg.toFixed(4);
-    }    time4(t) {
+    }
+    time4(t) {
         t = t.replace(/\-/g, "/");
         var d = new Date(t);
         const year = d.getFullYear();
@@ -196,7 +200,8 @@ class Base {
         输出数组.BAR最大值 = BAR最大值;
         输出数组.BAR最小值 = BAR最小值;
         return 输出数组;
-    }    junjia(sz, index) {
+    }
+    junjia(sz, index) {
         var avg = 0;
         var sum = 0;
         for (var i = 0; i < index; i++) {
@@ -204,6 +209,7 @@ class Base {
         };
         avg = sum / index;
         return avg;
-    }}
+    }
+}
 
 export default Base

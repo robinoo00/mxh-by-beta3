@@ -1,17 +1,17 @@
 .k-nav{
+    display: flex;
     background-color: #4a4a4a;
+    justify-content: space-around;
     height: .3rem;
     overflow: hidden;
 }
 .k-nav-item{
     border-right: 1px solid #3f3f3f;
-    line-height: .29rem;
+    line-height: .3rem;
     padding: 0 .1rem;
     font-size: .1rem;
-    /*flex: 1;*/
+    flex: 1;
     text-align: center;
-    white-space: nowrap;
-    margin-left: 0 !important;
 }
 .k-nav-item:last-of-type{
     border-right: none;

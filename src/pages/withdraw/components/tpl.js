@@ -6,28 +6,37 @@ import {InputItem,WhiteSpace,Toast} from 'antd-mobile'
 import {createForm} from 'rc-form'
 import Button from '../../../components/button/button'
 
-const Example = ({form,list,submit,validateMoney}) => {
+const Example = ({form,submit,validateMoney}) => {
     return (
         <div>
             <Header
                 title={'提现'}
             />
             <WhiteSpace size={"md"}/>
-            {list.map(item => (
-                <InputItem
-                    type={"money"}
-                    moneyKeyboardAlign={"left"}
-                    key={item.name}
-                    {...form.getFieldProps(item.name, {
-                        initialValue: '',
-                        rules: [{
-                            required: true, message: '请输入' + item.title,
-                        }, {
-                            validator: validateMoney,
-                        }],
-                    })}
-                >金额</InputItem>
-            ))}
+            <InputItem
+                type={"money"}
+                moneyKeyboardAlign={"left"}
+                {...form.getFieldProps('money', {
+                    initialValue: '',
+                    rules: [{
+                        required: true, message: '请输入交易金额',
+                    }, {
+                        validator: validateMoney,
+                    }],
+                })}
+            >金额</InputItem>
+            {/*<InputItem*/}
+                {/*type={"password"}*/}
+                {/*moneyKeyboardAlign={"left"}*/}
+                {/*{...form.getFieldProps('pass', {*/}
+                    {/*initialValue: '',*/}
+                    {/*rules: [{*/}
+                        {/*required: true, message: '请输入交易密码',*/}
+                    {/*}, {*/}
+                        {/*validator: validateMoney,*/}
+                    {/*}],*/}
+                {/*})}*/}
+            {/*>交易密码</InputItem>*/}
             <div style={{padding:'.3rem .15rem'}} onClick={submit}>
                 <Button
                     title={'确认'}
@@ -38,7 +47,7 @@ const Example = ({form,list,submit,validateMoney}) => {
 };
 
 const mapStateToProps = state => ({
-    list:state.withdraw.list
+    // list:state.withdraw.list
 })
 
 const mapDispatchToProps = (dispatch,props) => ({
@@ -47,9 +56,11 @@ const mapDispatchToProps = (dispatch,props) => ({
             if (!error) {
                 let value = props.form.getFieldsValue();
                 const money = value.money;
+                // const pass = value.pass;
                 dispatch({
                     type:'withdraw/withdraw',
-                    money:money
+                    money:money,
+                    // pass:pass
                 })
             } else {
                 const errors = Object.values(error);

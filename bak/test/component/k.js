@@ -4,11 +4,10 @@ import {connect} from 'dva'
 import CSSModules from 'react-css-modules'
 import styles from '../styles/k.css'
 import config from "../../../utils/config";
-import {Flex} from 'antd-mobile'
 
 const draw = new Draw();
 var work = window.$.connection.myHub;
-window.$.connection.hub.url = 'http://47.100.123.216:1218/lcc';
+window.$.connection.hub.url = 'http://47.100.110.48:1817/lcc';
 function chooseKType(code,type){
     window.$.connection.hub.start().done(function () {
         work.server.k线(code, type, "");
@@ -18,11 +17,7 @@ function chooseKType(code,type){
 class K extends React.Component {
     componentDidMount() {
         const data = this.getChooseData();
-        const _this = this
-        // if(draw.第一次加载数据){
-        //     console.log(123);
-        //     window.location.reload();
-        // }
+        const _this = this;
         setTimeout(() => {
             const h = document.body.offsetHeight - document.getElementById('trade-op').offsetHeight - 80 - 10
             draw.画布id = "k";
@@ -35,12 +30,11 @@ class K extends React.Component {
             draw.init();
             draw.loading();
             draw.eve();
-            chooseKType(sessionStorage.getItem(config.TRADE_CODE), "分时");
-            // if(data.length === 0){
-            //     chooseKType(sessionStorage.getItem(config.TRADE_CODE), "分时");
-            // }else{
-            //     _this.draw(data);
-            // }
+            if(data.length === 0){
+                chooseKType(sessionStorage.getItem(config.TRADE_CODE), "分时");
+            }else{
+                _this.draw(data);
+            }
         })
     }
     componentWillReceiveProps(nextProps){
@@ -51,13 +45,7 @@ class K extends React.Component {
             this.draw(draw_data);
         }
     }
-    componentWillUnmount(){
-        const {init} = this.props;
-        window.k_type_choose = '分时';
-        draw.loading();
-        draw.reload();
-        init();
-    }
+
     draw(data) {
         const {type_choose} = this.props;
         const len = data.length;
@@ -103,11 +91,7 @@ class K extends React.Component {
 
     chooseType = type => () => {
         const {...rest} = this.props;
-        console.log(type);
-        console.log(rest.type_choose);
         if (rest.type_choose != type) {
-            draw.分时数据 = [];
-            draw.reload();
             draw.loading();
             window.k_type_choose = type;
             rest.assignTypeChoose(type);
@@ -126,16 +110,11 @@ class K extends React.Component {
         const {type_list,type_choose} = this.props;
         return (
             <div>
-                <Flex styleName="k-nav">
+                <nav styleName="k-nav">
                     {type_list.map((item,index) => (
-                        <Flex.Item style={type_choose === item ? {borderBottom:'1px solid #fff'} : {}} styleName={"k-nav-item"} key={'k_nav_'+index} onClick={this.chooseType(item).bind(this)}>{item}</Flex.Item>
+                        <div style={type_choose === item ? {borderBottom:'1px solid #fff'} : {}} styleName={"k-nav-item"} key={'k_nav_'+index} onClick={this.chooseType(item).bind(this)}>{item}</div>
                     ))}
-                </Flex>
-                {/*<nav styleName="k-nav">*/}
-                    {/*{type_list.map((item,index) => (*/}
-                        {/*<div style={type_choose === item ? {borderBottom:'1px solid #fff'} : {}} styleName={"k-nav-item"} key={'k_nav_'+index} onClick={this.chooseType(item).bind(this)}>{item}</div>*/}
-                    {/*))}*/}
-                {/*</nav>*/}
+                </nav>
                 <canvas id="k" style={{zoom: 0.5, backgroundColor: "#20212b"}}></canvas>
             </div>
         )
@@ -155,11 +134,6 @@ const mapStateToProps = state => ({
 })
 
 const mapDispatchToProps = dispatch => ({
-    init: () => {
-        dispatch({
-            type: 'test/init',
-        })
-    },
     assignData: (data) => {
         dispatch({
             type: 'test/assignData',
